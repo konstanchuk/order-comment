@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Order Comment Extension for Magento 2
+ *
+ * @author     Volodymyr Konstanchuk http://konstanchuk.com
+ * @copyright  Copyright (c) 2017 The authors
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Konstanchuk_OrderComment::css/style.css"/>
+    </head>
+    <body>
+        <referenceContainer name="payment_additional_info">
+            <block class="Konstanchuk\OrderComment\Block\Adminhtml\Order\View\Comment" name="customer_order_comment"
+                   template="Konstanchuk_OrderComment::order/view/comment.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

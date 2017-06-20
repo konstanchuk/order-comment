@@ -1,0 +1,34 @@
+<!--
+/**
+ * Order Comment Extension for Magento 2
+ *
+ * @author     Volodymyr Konstanchuk http://konstanchuk.com
+ * @copyright  Copyright (c) 2017 The authors
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<div data-bind="visible: canVisibleBlock">
+    <div class="payment-option _collapsible opc-payment-additional discount-code"
+         data-bind="mageInit: {'collapsible':{'openedState': '_active'}}">
+        <div class="payment-option-title field choice" data-role="title">
+            <span class="action action-toggle" id="block-comment-heading" role="heading" aria-level="2">
+                <!-- ko i18n: 'Leave Comment'--><!-- /ko -->
+            </span>
+        </div>
+        <div class="payment-option-content" data-role="content">
+            <form class="form form-discount" id="comment-form">
+                <div class="payment-option-inner">
+                    <div class="field">
+                        <label class="label" for="orderComment">
+                            <span data-bind="i18n: 'Enter comment'"></span>
+                        </label>
+                        <div class="control">
+                            <textarea class="input-text" id="orderComment" name="order_comment" rows="2" maxlength="200"
+                                      data-bind="attr:{placeholder: $t('Enter comment')} "></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
